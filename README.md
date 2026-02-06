@@ -1,5 +1,6 @@
-1️⃣ Entities and Relationships
-1. Movie
+**Entities and Relationships**
+
+**1. Movie**
 
 Attributes: id, title, language, genre, durationMinutes
 
@@ -7,7 +8,7 @@ Relationships:
 
 1 Movie → many Shows (OneToMany)
 
-2. Theatre
+**2. Theatre**
 
 Attributes: id, name, city, address, active (boolean)
 
@@ -17,7 +18,7 @@ Relationships:
 
 Active theatres are used for discounts
 
-3. Screen
+**3. Screen**
 
 Attributes: id, name, totalSeats, format (e.g., IMAX)
 
@@ -29,7 +30,7 @@ Many Screens → 1 Theatre (ManyToOne)
 
 1 Screen → many Shows (OneToMany)
 
-4. Seat
+**4. Seat**
 
 Attributes: id, seatNumber (A1, A2...), type (PREMIUM / REGULAR)
 
@@ -39,7 +40,7 @@ Many Seats → 1 Screen (ManyToOne)
 
 Seats are used to generate ShowSeats for each Show
 
-5. Show
+**5. Show**
 
 Attributes: id, showDate, showTime, basePrice
 
@@ -51,7 +52,7 @@ Many Shows → 1 Screen (ManyToOne)
 
 1 Show → many ShowSeats (OneToMany)
 
-6. ShowSeat
+**6. ShowSeat**
 
 Attributes: id, booked (boolean)
 
@@ -63,7 +64,7 @@ Many ShowSeats → 1 Seat (ManyToOne)
 
 Purpose: Tracks seat availability for each Show
 
-7. User
+**7. User**
 
 Attributes: id, name, email
 
@@ -71,7 +72,7 @@ Relationships:
 
 1 User → many Bookings (OneToMany)
 
-8. Booking
+**8. Booking**
 
 Attributes: id, totalSeats, totalAmount, bookingTime
 
